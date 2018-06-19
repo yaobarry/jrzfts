@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block title %}卡bin 查询{% endblock %}
+
+{% block content %}
+<div class="cardbin">
+    <form class="cb-search-form">
+        <input type="text" placeholder="cardbin..." name="cbsearch" required="" class="cb-search-text"> 
+        <input type="submit" value="查询" class="cb-search-submit"> 
+    </form>
+    <table>
+        <tr>
+            <th>卡bin</th>
+            <th>卡类型</th>
+            <th>卡组织</th>
+            <th>发卡国</th>
+            <th>发卡行</th>
+            <th>发bin状态</th>
+            <th>卡号位数</th>
+        </tr>
+        <tr>
+        {% for cardbin in object_list %}
+            <td> {{ cardbin.cardbin }} </td>
+        {% endfor %}
+        /tr>
+    </table>
+</div>
+{% endblock %}
