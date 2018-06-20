@@ -20,4 +20,5 @@ from gqs import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homeview),
+    path('paylist',views.paywaylist),
 ]
