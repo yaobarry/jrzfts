@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "index.html" %}
 
-</body>
-</html>
+{% block title %}可用支付方式 查询{% endblock %}
+
+{% block content %}
+<div class="cardno">
+    {% if form.errors %}
+        <p style="color: red;">
+            输入错误：{ form.errors }} 
+        </p>
+    {% endif %}
+    <form class="cn-search-form" action="" method="post">
+        <table class="cn-search-table">
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="查询" class="cn-search-submit"> 
+    </form>
+    <div class="cn-part">
+        <p> {{ result }} </p>
+    </div>
+</div>
+{% endblock %}

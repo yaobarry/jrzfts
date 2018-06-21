@@ -25,11 +25,10 @@ b               {font-weight: bold}
 
 
 #page_wrap {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    float: left;
     background: #ffffff;
     position: relative;
     overflow: hidden;
@@ -96,7 +95,7 @@ nav{
 }
 
 #menu li:hover .menu-abs-bg{
-    width: 100%;
+    width: 110%;
 }
 
 #menu li .menu-specs a{
@@ -120,47 +119,15 @@ nav{
     color: #ffffff;
 }
 
-#menu > li > ul{
-    display: none;
-    float: left;
-    width: 100%;
-    position: absolute;
-    top: 95%;
-    left: 0;
-    border-radius: 0 0 5px 5px;
-    z-index: 9;
-    box-shadow: 0 0 5px #000;
-}
-
-#menu > li > ul > li{
-    display: block;
-    float: left;
-    background: rgb(255, 255, 255);
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #444;
-    position: relative;
-}
-
-
-#menu > li > ul > li > a {
-    font-size: 12px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    z-index: 2;
-    position: relative;
-}
 
 .rightSide {
     float: left;
     width: auto;
-    height: 80px;
-    left: 0;
+    height: 100%;
 }
 
 .search-and-misc{
-    float: left;
-    padding: 2% 35%;
-    width: 500px;
+    width: 100%;
     height: 80px;
     position: absolute;
     background: #616161;
@@ -169,6 +136,7 @@ nav{
 .search-form{
     width: 210px;
     height: 30px;
+    margin:2% 35%;
     background: url('img/search-box.png');
 }
 
@@ -205,3 +173,10 @@ nav{
   * LEFT SIDE/MENU COLUMN ENDS *
   *                            **/
 
+.cardno{
+    width: 500px;
+}
+
+.payway{
+    width: 500px;
+}

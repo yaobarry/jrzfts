@@ -20,7 +20,7 @@
 
         <div class="logo-container">
 
-            <a id="logo" title="综合查询" href="http://www.ctrip.com"><img src="static/img/c_logo.png" alt="综合查询"></a>
+            <a id="logo" title="综合查询" href="http://www.ctrip.com"><img src="/static/img/c_logo.png" alt="综合查询"></a>
 
         </div>
 
@@ -28,21 +28,21 @@
             <li>
                 <div class="menu-abs-bg background-color"></div>
                 <div class="home-icon menu-specs">
-                    <a href="payway.html" title="payway query">支付方式</a>
+                    <a href="{% url 'paylist' %}" title="payway query">支付方式</a>
                     <span>无线可用支付方式查询</span>
                 </div>
             </li>
             <li>
                 <div class="menu-abs-bg background-color"></div>
                 <div class="aboutus-icon menu-specs">
-                    <a href="cardno.html" title="cardno check">卡号效验</a>
+                    <a href="{% url 'cardnocheck' %}" title="cardno check">卡号效验</a>
                     <span>卡号luhn规则效验</span>
                 </div>
             </li>
             <li>
                 <div class="menu-abs-bg background-color"></div>
                 <div class="services-icon menu-specs">
-                    <a href="cardbin.html" title="cardbin query">卡bin查询</a>
+                    <a href="cardbin" title="cardbin query">卡bin查询</a>
                     <span>卡bin信息查询</span>
                 </div>
             </li>
@@ -57,8 +57,8 @@
                 <input type="submit" value=" " class="search-submit">
             </form>
         </div>
+        {% block content %}<p id="welcome">欢迎使用综合查询平台！</p>{% endblock %}
     </div>
-    {% block content %}<p id="welcome">欢迎使用综合查询平台！</p>{% endblock %}
 </div>
 </body>
 </html>
