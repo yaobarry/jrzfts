@@ -4,22 +4,30 @@
 
 {% block content %}
 <div class="cardbin">
-    <form class="cb-search-form">
-        <input type="text" placeholder="cardbin..." name="cbsearch" required="" class="cb-search-text"> 
-        <input type="submit" value="查询" class="cb-search-submit"> 
-    </form>
+    {% if form.errors %}
+        <p style="color: red;">
+            输入错误：{{ form.errors }} 
+        </p>
+    {% endif %}
+        <form class="cb-search-form" action="" method="post">
+            <table class="cb-search-table">
+                {{ form.as_table }}
+            </table>
+            <input type="submit" value="查询" class="cb-search-submit"> 
+        </form>
     <table class="cb-table">
         <tr class="cb-th">
             <th>卡bin</th>
+            <th>卡号位数</th>
             <th>卡类型</th>
+            <th>发bin状态</th>
+            <th>发卡行</th>
+            <th>发卡行简称</th>
             <th>卡组织</th>
             <th>发卡国</th>
-            <th>发卡行</th>
-            <th>发bin状态</th>
-            <th>卡号位数</th>
         </tr>
         <tr class="cb-td">
-        {% for cardbin in object_list %}
+        {% for cardbin in cb %}
             <td> {{ cardbin.cardbin }} </td>
             <td> {{ cardbin.cardnolen }} </td>
             <td> {{ cardbin.cardtype }} </td>
@@ -28,6 +36,10 @@
             <td> {{ cardbin.bankabbname }} </td>
             <td> {{ cardbin.associations }} </td>
             <td> {{ cardbin.country }} </td>
+        {% empty %}
+        <p style="color: red;">
+            {{ error  }} 
+        </p>
         {% endfor %}
         </tr>
     </table>

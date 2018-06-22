@@ -6,3 +6,6 @@ class PayWayForm(forms.Form):
 
 class CardNoForm(forms.Form):
     cardno = forms.IntegerField()
+
+class CardBinForm(forms.Form):
+    cardbin = forms.IntegerField()
