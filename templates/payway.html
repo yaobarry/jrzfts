@@ -4,11 +4,11 @@
 
 {% block content %}
 <div class="payway">
-    {% if form.errors %}
-        <p style="color: red;">
-            输入错误：{ form.errors }} 
-        </p>
-    {% endif %}
+{% if form.errors %}
+    <p style="color: red;">
+        输入错误：{ form.errors }} 
+    </p>
+{% endif %}
     <form class="pw-search-form" action="" method="post">
         <table class="pw-search-table">
             {{ form.as_table }}
@@ -18,17 +18,17 @@
     <div class="pw-part">
         <p class="pw-text">支付大类</p>
         <ul class="pw-list">
-            {% for payway in payway_list %}
-                <li> {{ payway.payname }} </li>
-            {% endfor %}
+        {% for payway in payway_list %}
+            <li> {{ payway.payname }} </li>
+        {% endfor %}
         </ul>
     </div>
     <div class="spw-part">
         <p class="spw-text">支付小类</p>
         <ul class="spw-list">
-            {% for subpayway in subpayway_list %}
-                <li> {{ subpayway.subpayname }} </li>
-            {% endfor %}
+        {% for subpayway in subpayway_list %}
+            <li> {{ subpayway.subpayname }} </li>
+        {% endfor %}
         </ul>
     </div>
 </div>

@@ -27,22 +27,22 @@
         <ul id="menu">
             <li>
                 <div class="menu-abs-bg background-color"></div>
-                <div class="home-icon menu-specs">
+                <div class="menu-specs">
                     <a href="{% url 'paylist' %}" title="payway query">支付方式</a>
                     <span>无线可用支付方式查询</span>
                 </div>
             </li>
             <li>
                 <div class="menu-abs-bg background-color"></div>
-                <div class="aboutus-icon menu-specs">
+                <div class="menu-specs">
                     <a href="{% url 'cardnocheck' %}" title="cardno check">卡号效验</a>
                     <span>卡号luhn规则效验</span>
                 </div>
             </li>
             <li>
                 <div class="menu-abs-bg background-color"></div>
-                <div class="services-icon menu-specs">
-                    <a href="cardbin" title="cardbin query">卡bin查询</a>
+                <div class="menu-specs">
+                    <a href="{% url 'cardbinquery' %}" title="cardbin query">卡bin查询</a>
                     <span>卡bin信息查询</span>
                 </div>
             </li>

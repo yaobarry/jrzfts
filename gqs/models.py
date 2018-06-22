@@ -8,8 +8,6 @@ class PayList(models.Model):
     status = models.BooleanField()
     def __str__(self):
         return self.payname
-    class Meta:
-        ordering = ['pid']
 
 class SubPayList(models.Model):
     sid = models.BigIntegerField()
@@ -17,8 +15,6 @@ class SubPayList(models.Model):
     status = models.BooleanField()
     def __str__(self):
         return self.subpayname
-    class Meta:
-        ordering = ['sid']
 
 class CardBin(models.Model):
     cardbin = models.CharField(max_length=10)
@@ -31,6 +27,5 @@ class CardBin(models.Model):
     country = models.CharField(max_length=10)
     def __str__(self):
         return self.cardbin
-    class Meta:
-        ordering = ['cardbin']
+
 

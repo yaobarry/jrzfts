@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.homeview),
     path('paylist/',views.paywaylist,name='paylist'),
     path('cardnocheck/', views.cardnocheck,name='cardnocheck'),
+    path('cardbinquery/', views.cardbinquery, name='cardbinquery'),
 ]
