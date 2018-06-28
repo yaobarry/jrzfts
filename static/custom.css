@@ -148,7 +148,7 @@ header{
 }
 
 #welcome{
-    margin: 20% 35%;
+    margin: 20% 25%;
     float: left;
     font-size: 30px;
     font-weight: bold;
@@ -227,7 +227,7 @@ header{
 }
 
 .cardbin{
-    margin: 200px 10%;
+    margin: 200px 100px;
     width: 800px;
     position: absolute;
 }
